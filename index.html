@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Visualisation App</title>
+
+    <!-- Libraries -->
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.dom.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Main sketch file -->
+    <script src="sketch.js"></script>
+
+    <!-- Main visualisation files -->
+    <script src="Report.js"></script>
+    <script src="Table.js"></script>
+    <script src="Matrix.js"></script>
+    <script src="Model.js"></script>
+    <script src="Page.js"></script>
+    <script src="Visual.js"></script>
+    <script src="TableMatrix.js"></script>
+    <script src="Slicer.js"></script>
+    <script src="PieChart.js"></script>
+    <script src="BarChart.js"></script>
+    <script src="HorizontalBarChart.js"></script>
+    <script src="LineChart.js"></script>
+    <script src="Scatterplot.js"></script>
+    <script src="Card.js"></script>
+    <script src="helpers.js"></script>
+
+    <!-- Add Data Modelling Steps Below -->
+    <script src="etl/salesdata.js"></script>
+
+    <!-- Add Report Building Steps Below -->
+    <script src="reports/dashboard.js"></script>
+    <script src="reports/product.js"></script>
+    <script src="reports/customer.js"></script>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+
+    <div id="app" class="container"></div>
+  </body>
+</html>
