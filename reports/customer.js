@@ -80,7 +80,7 @@ function build_customer_page() {
       250,
       185,
       600,
-      650
+      610
     )
     .addYAxis("Customer Name", "Dim_Customer", "CUSTOMERNAME")
     .addXAxis("Revenue Generated", "SUM(Fact_Sales[SALES])", "integer")
@@ -101,7 +101,7 @@ function build_customer_page() {
 
   report
     .getPage("page_customer")
-    .addPieChart("scatter1", "Revenue By Customer", 860, 545, 520, 290)
+    .addPieChart("scatter1", "Revenue By Customer", 860, 545, 520, 250)
     .addCategory("Customer Name", "Dim_Customer", "CUSTOMERNAME")
     .addValue("Revenue Generated", "SUM(Fact_Sales[SALES])", "integer");
 
@@ -113,7 +113,7 @@ function build_customer_page() {
       1390,
       545,
       520,
-      290
+      250
     )
     .addYAxis("Customer Name", "Dim_Customer", "CUSTOMERNAME")
     .addXAxis(

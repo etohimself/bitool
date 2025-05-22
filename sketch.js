@@ -10,14 +10,24 @@ async function preload() {
   //We are ready
   dataReady = 1;
 }
-
 function setup() {
-  //Setup p5 Canvas
-  reportCanvas = select("#app");
-  var c = createCanvas(window.innerWidth, window.innerHeight);
+  // Setup p5 Canvas with device pixel ratio compensation
+  const ratio = window.devicePixelRatio || 1;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  // Create canvas at scaled resolution
+  const c = createCanvas(width * ratio, height * ratio);
   c.parent("app");
 
-  //Report building steps for dashboard page (see dashboard.js inside reports folder)
+  // Match visual size to logical pixel size
+  canvas.style.width = width + "px";
+  canvas.style.height = height + "px";
+
+  // Scale drawing to normal coordinate system
+  scale(ratio);
+
+  // Report building steps
   build_dashboard_page();
   build_product_page();
   build_customer_page();

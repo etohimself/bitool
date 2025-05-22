@@ -93,14 +93,14 @@ function build_dashboard_page() {
 
   report
     .getPage("page_dashboard")
-    .addBarChart("barchart1", "Orders Over Months", 250, 545, 1140, 310)
+    .addBarChart("barchart1", "Orders Over Months", 250, 545, 1140, 260)
     .addXAxis("Month Start", "Dim_Date", "Month Start")
     .addYAxis("Revenue", "SUM(Fact_Sales[SALES])", "integer")
     .sortBy("Month Start", "ascending");
 
   report
     .getPage("page_dashboard")
-    .addDonutChart("donut1", "Revenue By Products", 1400, 545, 500, 310)
+    .addDonutChart("donut1", "Revenue By Products", 1400, 545, 500, 260)
     .addCategory("Product Line", "Dim_ProductLine", "PRODUCTLINE")
     .addValue("Revenue", "SUM(Fact_Sales[SALES])", "integer");
 }

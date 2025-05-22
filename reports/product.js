@@ -102,7 +102,7 @@ function build_product_page() {
 
   report
     .getPage("page_product")
-    .addMatrix("table1", 250, 545, 1140, 310)
+    .addMatrix("table1", 250, 545, 1140, 270)
     .addRow("Product", "Dim_ProductLine", "PRODUCTLINE")
     .addRow("Month Start", "Dim_Date", "Month Start")
     .addValue(
@@ -166,7 +166,7 @@ function build_product_page() {
       1400,
       545,
       500,
-      310
+      270
     )
     .addYAxis("Product Line", "Dim_ProductLine", "PRODUCTLINE")
     .addXAxis(
